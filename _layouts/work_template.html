@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<section>
+  <h1 class="title"  style="margin-bottom: 16px">{{ page.title | upcase }}</h1>
+  <div class="content">
+    <div class="description">
+      <article class="lilborder">
+        <p>
+          {% for kw in page.keywords %}
+            {{ kw }}<br>
+          {% endfor %}
+        </p></article>
+      <article class="lilborder" >
+        <p style="columns: 2 250px;">{{ content }}</p>
+      </article>
+    </div>
+    <div class="img top right">
+      <img class="" src="/assets/img/img1.jpg" alt="Flowers in Chania" style="margin: unset; margin-bottom: auto">
+    </div>
+    <div class="img bot left i1">
+      <img class="" src="/assets/img/img1.jpg" alt="Flowers in Chania">
+    </div>
+    <div class="img bot left i2">
+      <img class="" src="/assets/img/img1.jpg" alt="Flowers in Chania">
+    </div>
+    <div class="img bot right">
+      <img class="" src="/assets/img/img1.jpg" alt="Flowers in Chania">
+    </div>
+  </div>
+
+</section>
