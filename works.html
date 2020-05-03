@@ -12,7 +12,7 @@ permalink: /works
                 {{ work.short_desc }}</a>
                 <i onclick="toggleImg(this)" class="material-icons showimg">arrow_downward</i>
             </p>
-            <img class="work w3-hide" src="{{site.baseurl}}/assets/img/img1.jpg" alt="Flowers in Chania">
+            <img class="work w3-hide" src="{{site.baseurl}}{{site.imgurl}}{{work.imgdir}}{{work.img_thumbnail}}" alt="Flowers in Chania">
         </article>
         {% if forloop.last == true %}
         </div>
