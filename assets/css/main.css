@@ -102,6 +102,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 html, body, h1, h2, h3, h4, h5, h6, a {
   font-family: Neue Haas Grotesk Text Pro, serif;
   line-height: 1.5;
@@ -187,6 +189,8 @@ article {
   right: 0;
   background-color: white; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
   display: block;
 }
@@ -204,6 +208,8 @@ article {
   padding: 4px 0px;
   text-decoration: none;
   color: black;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   margin-left: 238px;
   display: inline-block;
@@ -218,10 +224,13 @@ a:hover, i.material-icons:hover, article span:hover {
 }
 
 .topbar {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 440px 1fr auto;
   grid-template-columns: 440px 1fr auto;
+  -ms-grid-rows: auto;
   grid-template-rows: auto;
-  grid-template-areas: "pv . ham";
+      grid-template-areas: "pv . ham";
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -244,6 +253,8 @@ a:hover, i.material-icons:hover, article span:hover {
   width: auto;
   padding: 0;
   border-bottom: 2px solid black;
+  -webkit-transition: right 0.4s ease-out;
+  -o-transition: right 0.4s ease-out;
   transition: right 0.4s ease-out;
 }
 
@@ -261,115 +272,164 @@ a:hover, i.material-icons:hover, article span:hover {
   padding-right: 6px;
 }
 
-.pv { /*if display widht is > 500*/
+.pv { -ms-grid-row: 1; -ms-grid-column: 1; /*if display widht is > 500*/
   grid-area: pv;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: stretch;
   place-self: center stretch;
   border-color: transparent;
   border-style: solid;
   border-width: 2px;
   border-radius: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-transition: border-color 0s ease-in;
+  -o-transition: border-color 0s ease-in;
   transition: border-color 0s ease-in;
 }
 
 .pv.active {
   border-color: black;
-  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+       -o-transition-duration: 0.6s;
+          transition-duration: 0.6s;
 }
 
 i.searchicon {
   color: transparent;
   font-size: 32px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
   margin-bottom: auto;
   margin-top: 11px;
   margin-left: auto;
   margin-right: 12px;
+  -webkit-transition: color 0s cubic-bezier(.46, .03, .52, .96);
+  -o-transition: color 0s cubic-bezier(.46, .03, .52, .96);
   transition: color 0s cubic-bezier(.46, .03, .52, .96);
 }
 
 i.searchicon.active {
   color: black;
-  transition-duration: 0.6s;
+  -webkit-transition-duration: 0.6s;
+       -o-transition-duration: 0.6s;
+          transition-duration: 0.6s;
 }
 
 i.showimg {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: text-bottom;
     cursor: pointer;
 }
 
 img.work {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   max-width: 99%;
   max-height: 99%;
   margin-right: 16px;
 }
 
 .content {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 24.99% 16px 24.99% 16px 49.99%;
   grid-template-columns: 24.99% 24.99% 49.99%;
+  -ms-grid-rows: 1fr 16px auto;
   grid-template-rows: 1fr auto;
-  grid-template-areas: "desc desc rimg" "bl1 bl2 br";
+      grid-template-areas: "desc desc rimg" "bl1 bl2 br";
   z-index: 1;
   grid-gap: 16px;
 }
 
 .content div img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   max-width: 99%;
   max-height: 99%;
 }
 
 .content div.description {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: desc;
 }
 
 .content div.img.top.right {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
   grid-area: rimg;
-  align-self: end;
-  justify-self: start;
+  -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 
 .content div.img.bottom.left.i1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: bl1;
-  align-self: start;
-  justify-self: start;
+  -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 
 .content div.img.bottom.left.i2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
   grid-area: bl2;
-  align-self: start;
-  justify-self: end;
+  -ms-grid-row-align: start;
+      align-self: start;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 .content div.img.bottom.right {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
   grid-area: br;
 }
 
 .bio {
   grid-area: bio;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: start;
   place-self: center start;
 }
 
 .prog {
   grid-area: prog;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: start;
   place-self: center start;
 }
 
 .cont {
   grid-area: cont;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: start;
   place-self: center start;
 }
 
 .ham {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: ham;
+  -ms-grid-row-align: center;
+  -ms-grid-column-align: end;
   place-self: center end;
 }
 
 @media screen and (max-width: 600px) {
   .topbar {
+    -ms-grid-columns: auto 1fr auto;
     grid-template-columns: auto 1fr auto;
   }
 
@@ -384,9 +444,15 @@ img.work {
 
   .pv .title {
     padding-left: 0; /*correct the inline flex slight difference*/
+    -webkit-transition-property: padding-left;
+    -o-transition-property: padding-left;
     transition-property: padding-left;
-    transition-timing-function: ease-out;
-    transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-out;
+         -o-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
 
   .pv .title.active {
@@ -394,44 +460,65 @@ img.work {
   }
 
   .content {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
     grid-template-rows: auto;
-    grid-template-areas: "rimg" "desc" "br" "bl1" "bl2";
+        grid-template-areas: "rimg" "desc" "br" "bl1" "bl2";
     z-index: 3;
     grid-gap: 16px;
   }
 
   .content div img {
-    align-self: start;
-    justify-self: start;
+    -ms-flex-item-align: start;
+        -ms-grid-row-align: start;
+        align-self: start;
+    -ms-grid-column-align: start;
+        justify-self: start;
     padding-left: 16px;
     width: 99%;
   }
 
+  .content div.description {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .content div.img.top.right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .content div.img.bottom.left.i1 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+
+  .content div.img.bottom.left.i2 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+  }
+
+  .content div.img.bottom.right {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
 }
 
-/*
-.hamburger span{
-
+@media screen and (max-width: 380px) {
+  h1{
+    font-size: 8vw;
+  }
+  i.searchicon {
+    margin-top: 0.5vh;
+    margin-right: 2vw;
+    font-size: 9vw;
+  }
 }
-
-header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-header li {
-
-}
-header li h1 {
-  display: block;
-  color: Black;
-  text-align: center;
-  text-decoration: none;
-  margin: fill;
-}*/
 /* ==========================================================================
    Helper classes
    ========================================================================== */
