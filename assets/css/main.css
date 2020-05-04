@@ -485,7 +485,7 @@ img.work {
         transition-duration: 0.2s;
     }
 
-    .pv a .title.active {
+    .pv a.active{
         padding-left: 20px;
     }
 

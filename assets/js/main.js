@@ -18,7 +18,7 @@ function toggleSidePanel() {
 function togglePVBorder() {
   $("#pv").toggleClass("active")
   $("#pv > i").toggleClass("active")
-  $("#pv > h1").toggleClass("active")
+  $("#pv > a").toggleClass("active")
 
 }
 function toggleTopBarBorder() {
