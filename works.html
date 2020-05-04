@@ -1,16 +1,16 @@
 ---
-permalink: /works
+permalink: /
 ---
 <section class="w3-threequarter w3-row">
     <h1 class="title">WORKS</h1>
-    <article><p>Introduzione molto interessanti ai lavori</p></article>
+    <article><h3>2017-2020</h3></article>
     {% for work in site.works %}
         {% cycle "open": "<div class='w3-third'>", "", "" %}
         <article class="lilborder">
             <p><a href="{{site.baseurl}}{{ work.url }}">
                 <span style="font-style: italic">{{ work.title | upcase }}</br></span>
                 {{ work.short_desc }}</a>
-                <i onclick="toggleImg(this)" class="material-icons showimg">arrow_downward</i>
+                <i onclick="toggleImg(this)" class="material-icons showimg">add</i>
             </p>
             <img class="work w3-hide" src="{{site.baseurl}}{{site.imgurl}}{{work.imgdir}}{{work.img_thumbnail}}" alt="Flowers in Chania">
         </article>

@@ -1,7 +1,7 @@
 function adjustTopbarHeight() {
-  h = $("#topbar").outerHeight() + 6;
+  h = $("#topbar").outerHeight() + 4;
   $("#topbarborder").parent().height(h);
-  $("#mySidepanel").css("top", h-6);
+  $("#mySidepanel").css("top", h-4);
 }
 
 function toggleHamburger(ham) {
@@ -26,5 +26,11 @@ function toggleTopBarBorder() {
 }
 
 function toggleImg(arr) {
-  $(arr).parent().next("img").toggleClass("w3-hide")
+  $(arr).html(function (index, value) {
+    if (value === 'add'){
+      return 'remove';
+    }
+    return 'add';
+  });
+  $(arr).parent().next("img").toggleClass("w3-hide");
 }
