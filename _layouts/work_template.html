@@ -31,13 +31,13 @@ layout: default
           {% if forloop.first == true %}
             <video autoplay loop muted style="">
           {% endif %}
-            <source id="asaasa" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_bot_right}}" type="video/{{ext}}">
+            <source id="asaasa" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{el}}" type="video/{{ext}}">
           {% if forloop.last == true %}
             Your Browser does not support videos.
             </video>
           {% endif %}
           {% else %}
-            <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_bot_right}}" alt="Flowers in Chania">
+            <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{el}}" alt="Flowers in Chania">
         {% endif %}
       {% endfor %}
 
