@@ -24,8 +24,23 @@ layout: default
     <div class="img bot left i2">
       <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_bot_left_2}}" alt="Flowers in Chania">
     </div>
-    <div class="img bot right">
-      <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_bot_right}}" alt="Flowers in Chania">
+    <div class="img bot right" style="position: relative">
+      {% for el in page.img_bot_right %}
+        {% assign ext = el | split: "." | last %}
+        {% if ext == "mp4" or ext == "webm" %}
+          {% if forloop.first == true %}
+            <video autoplay loop muted style="">
+          {% endif %}
+            <source id="asaasa" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_bot_right}}" type="video/{{ext}}">
+          {% if forloop.last == true %}
+            Your Browser does not support videos.
+            </video>
+          {% endif %}
+          {% else %}
+            <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_bot_right}}" alt="Flowers in Chania">
+        {% endif %}
+      {% endfor %}
+
     </div>
   </div>
 

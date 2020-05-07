@@ -7,10 +7,10 @@ permalink: /
     {% for work in site.works %}
         {% cycle "open": "<div class='w3-third'>", "", "" %}
         <article class="lilborder">
-            <p><a href="{{site.baseurl}}{{ work.url }}">
+            <p><a aria-label="open full {{ work.title }}" href="{{site.baseurl}}{{ work.url }}">
                 <span style="font-style: italic">{{ work.title | upcase }}</br></span>
                 {{ work.short_desc }}</a>
-                <i onclick="toggleImg(this)" class="material-icons showimg">add</i>
+                <i onclick="toggleImg(this)" class="material-icons showimg hoverable" aria-label="show preview of {{ work.title }}">add</i>
             </p>
             <img class="work w3-hide" src="{{site.baseurl}}{{site.imgurl}}{{work.imgdir}}{{work.img_thumbnail}}" alt="Flowers in Chania">
         </article>

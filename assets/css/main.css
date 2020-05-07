@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
@@ -11,12 +11,11 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
     color: #222;
     font-size: 16px;
     line-height: 1.4;
-    font-weight: lighter;
+    font-weight: 300;
 }
 
 a, span, p, div {
@@ -196,7 +195,7 @@ article {
     display: block;
 }
 
-.sidepanel.open {
+.sidepanel.active {
     width: 100%; /* 0 width - change this with JavaScript */
     /* The sidepanel links */
 }
@@ -220,7 +219,7 @@ a {
     text-decoration: none;
 }
 
-a:hover, i.material-icons:hover, article span:hover {
+a:hover, i.material-icons.hoverable:hover, article span:hover {
     color: #cbcbcc;
 }
 
@@ -355,10 +354,11 @@ img.work {
     -ms-grid-columns: 24.99% 16px 24.99% 16px 49.99%;
     grid-template-columns: 24.99% 24.99% auto;
     -ms-grid-rows: 1fr 16px auto;
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr auto;
     grid-template-areas: "desc desc rimg" "bl1 bl2 br";
     z-index: 1;
     grid-gap: 16px;
+    grid-auto-columns: 1fr;
 }
 
 .content div img {
@@ -416,6 +416,16 @@ img.work {
     -ms-grid-row: 3;
     -ms-grid-column: 5;
     grid-area: br;
+}
+
+.content div video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100%;
+    height: auto;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .bio {
