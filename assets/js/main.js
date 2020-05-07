@@ -12,7 +12,7 @@ function toggleHamburger(ham) {
 }
 
 function toggleSidePanel() {
-  $("#mySidepanel").toggleClass("open")
+  $("#mySidepanel").toggleClass("active")
 }
 
 function togglePVBorder() {
