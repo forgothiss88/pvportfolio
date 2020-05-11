@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+});
+
 function adjustTopbarHeight() {
   h = $("#topbar").outerHeight() + 4;
   $("#topbarborder").parent().height(h);

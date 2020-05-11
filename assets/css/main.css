@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
@@ -15,7 +15,7 @@ html {
     color: #222;
     font-size: 16px;
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 a, span, p, div {
