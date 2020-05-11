@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  adjustTopbarHeight();
   document.getElementsByTagName("html")[0].style.visibility = "visible";
 });
 

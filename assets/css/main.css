@@ -102,8 +102,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
 html, body, h1, h2, h3, h4, h5, h6, a {
     font-family: Inter, serif;
@@ -230,7 +234,7 @@ a:hover, i.material-icons.hoverable:hover, article span:hover {
     grid-template-columns: 440px 1fr auto;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
-    grid-template-areas: "pv . ham";
+        grid-template-areas: "pv . ham";
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
@@ -342,8 +346,8 @@ i.showimg {
 img.work {
     -o-object-fit: contain;
     object-fit: contain;
-    max-width: 99%;
-    max-height: 99%;
+    max-width: 99.999%;
+    max-height: 99.999%;
     margin-right: 16px;
 }
 
@@ -355,7 +359,7 @@ img.work {
     grid-template-columns: 24.99% 24.99% auto;
     -ms-grid-rows: 1fr 16px auto;
     grid-template-rows: 1fr auto;
-    grid-template-areas: "desc desc rimg" "bl1 bl2 br";
+        grid-template-areas: "desc desc rimg" "bl1 bl2 br";
     z-index: 1;
     grid-gap: 16px;
     grid-auto-columns: 1fr;
@@ -364,7 +368,7 @@ img.work {
 .content div img {
     -o-object-fit: contain;
     object-fit: contain;
-    max-width: 99%;
+    max-width: 99.999%;
 }
 
 .content div.description {
@@ -422,7 +426,7 @@ img.work {
     position: absolute;
     left: 0;
     top: 0;
-    max-width: 100%;
+    max-width: 99.999%;
     height: auto;
     background-size: cover;
     overflow: hidden;
@@ -479,7 +483,7 @@ img.work {
 
     section {
         margin-left: 0;
-        width: 100%;
+        width: 99.999%;
     }
 
     .pv .title {
@@ -519,7 +523,7 @@ img.work {
         justify-self: start;
         padding-left: 16px;
         padding-right: 11px;
-        width: 99%;
+        width: 99.999%;
     }
 
     .content div.description {
@@ -561,7 +565,6 @@ img.work {
         font-size: 9vw;
     }
 }
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
