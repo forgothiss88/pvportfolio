@@ -5,3 +5,6 @@ _site
 vendor
 .idea
 CNAME
+node_modules
+assets/js/bundle.js
+.bundle
