@@ -4,22 +4,32 @@ meta_title: "Works - Pietro Vitali"
 meta_description: "A collection of my latest academic and professinal projects"
 ---
 <section class="w3-threequarter w3-row">
-    <h1 class="title">WORKS</h1>
-    <article><h3>2017-2020</h3></article>
+    <article style="margin-top: 0">
+        <h1>WORKS</h1>
+        <h3>2017-2020</h3>
+    </article>
     {% for work in site.works %}
-        {% cycle "open": "<div class='w3-third'>", "", "" %}
-        <article class="lilborder">
-            <p><a aria-label="open full {{ work.title }}" href="{{site.baseurl}}{{ work.url }}">
-                <span style="font-style: italic">{{ work.title | upcase }}</br></span>
-                {{ work.short_desc }}</a>
-                <i onclick="toggleImg(this)" class="material-icons showimg hoverable" aria-label="show preview of {{ work.title }}">add</i>
+    {% cycle "open": "<div class='w3-third'>", "", "" %}
+        <article>
+            <span class="lilborder" style="display: flex">
+                <a aria-label="open full {{ work.title }}" href="{{site.baseurl}}{{ work.url }}">
+                    <h4>{{ work.title |
+                        upcase }}</h4>
+                </a>
+                <i style="margin-left: auto;margin-right: 0; align-self: center;" onclick="toggleImg(this)"
+                    class="material-icons showimg hoverable" aria-label="show preview of {{ work.title }}">add</i>
+            </span>
+            <img class="work w3-hide" src="{{site.baseurl}}{{site.imgurl}}{{work.imgdir}}{{work.img_thumbnail}}"
+                alt="Flowers in Chania">
+            <p>
+                {{ work.short_desc }} <a class="small-screen-only" style="font-style: italic;"
+                    href="{{site.baseurl}}{{ work.url }}">more...</a>
             </p>
-            <img class="work w3-hide" src="{{site.baseurl}}{{site.imgurl}}{{work.imgdir}}{{work.img_thumbnail}}" alt="Flowers in Chania">
         </article>
         {% if forloop.last == true %}
-        </div>
-        {% else %}
-            {% cycle "close": "", "", "</div>" %}
-        {% endif %}
+    </div>
+    {% else %}
+    {% cycle "close": "", "", "</div>" %}
+    {% endif %}
     {% endfor %}
 </section>

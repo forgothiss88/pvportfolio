@@ -2,20 +2,22 @@
 layout: default
 ---
 <section>
-  <h1 class="title"  style="margin-bottom: 16px">{{ page.title | upcase }}</h1>
+  <h1 class="title" style="margin-bottom: 16px">{{ page.title | upcase }}</h1>
   <div class="content">
     <div class="description">
       <article class="lilborder">
         <p>
           {% for kw in page.keywords %}
-            {{ kw }}<br>
+          {{ kw }}<br>
           {% endfor %}
-        </p></article>
-      <article class="lilborder" >
+        </p>
+      </article>
+      <article>
         <p style="columns: 2 250px;">{{ content }}</p>
       </article>
     </div>
-    <div class="img top right bg" style="background-image: url('{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_top_right}}')">
+    <div class="img top right bg"
+      style="background-image: url('{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_top_right}}')">
       <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{page.img_top_right}}" alt="Flowers in Chania">
     </div>
     <div class="img bot left i1">
@@ -26,19 +28,19 @@ layout: default
     </div>
     <div class="img bot right" style="position: relative">
       {% for el in page.img_bot_right %}
-        {% assign ext = el | split: "." | last %}
-        {% if ext == "mp4" or ext == "webm" %}
-          {% if forloop.first == true %}
-            <video autoplay loop muted style="">
-          {% endif %}
-            <source id="asaasa" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{el}}" type="video/{{ext}}">
-          {% if forloop.last == true %}
-            Your Browser does not support videos.
-            </video>
-          {% endif %}
-          {% else %}
-            <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{el}}" alt="Flowers in Chania">
+      {% assign ext = el | split: "." | last %}
+      {% if ext == "mp4" or ext == "webm" %}
+      {% if forloop.first == true %}
+      <video autoplay loop muted>
         {% endif %}
+        <source id="asaasa" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{el}}" type="video/{{ext}}">
+        {% if forloop.last == true %}
+        Your Browser does not support videos.
+      </video>
+      {% endif %}
+      {% else %}
+      <img class="" src="{{site.baseurl}}{{site.imgurl}}{{page.imgdir}}{{el}}" alt="Flowers in Chania">
+      {% endif %}
       {% endfor %}
 
     </div>
