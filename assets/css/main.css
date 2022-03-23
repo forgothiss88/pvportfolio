@@ -12,13 +12,16 @@
    Base styles: opinionated defaults
    ========================================================================== */
 html {
-    color: #222;
+  color: black;
     font-size: 16px;
     line-height: 1.4;
     font-weight: 400;
 }
 
-a, span, p, div {
+a,
+span,
+p,
+div {
     font-size: 16px;
 }
 
@@ -109,7 +112,15 @@ textarea {
 * Browsers: last 4 version
 */
 
-html, body, h1, h2, h3, h4, h5, h6, a {
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
     font-family: Inter, serif;
 }
 
@@ -148,7 +159,12 @@ aside {
     float: right;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 
@@ -223,7 +239,8 @@ a {
     text-decoration: none;
 }
 
-a:hover, i.material-icons.hoverable:hover, article span:hover {
+a:hover,
+i.material-icons.hoverable:hover {
     color: #cbcbcc;
 }
 
@@ -325,9 +342,9 @@ i.searchicon {
     margin-top: 11px;
     margin-left: auto;
     margin-right: 12px;
-    -webkit-transition: color 0s cubic-bezier(.46, .03, .52, .96);
-    -o-transition: color 0s cubic-bezier(.46, .03, .52, .96);
-    transition: color 0s cubic-bezier(.46, .03, .52, .96);
+  -webkit-transition: color 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  -o-transition: color 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transition: color 0s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 }
 
 i.searchicon.active {
@@ -476,7 +493,6 @@ img.work {
         display: block;
     }
 
-
     .sidepanel a {
         margin-left: 36px;
     }
@@ -499,7 +515,7 @@ img.work {
         transition-duration: 0.2s;
     }
 
-    .pv a.active{
+  .pv a.active {
         padding-left: 20px;
     }
 
@@ -551,7 +567,6 @@ img.work {
         -ms-grid-row: 5;
         -ms-grid-column: 1;
     }
-
 }
 
 @media screen and (max-width: 380px) {
@@ -739,4 +754,3 @@ img.work {
         page-break-after: avoid;
     }
 }
-
