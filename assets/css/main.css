@@ -195,7 +195,6 @@ article p {
 }
 
 .lilborder {
-  padding-bottom: 4px;
   border-bottom: 2px solid black; /* This creates the border. Replace black with whatever color you want. */
 }
 
