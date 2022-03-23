@@ -237,7 +237,7 @@ article p {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: unset;
 }
 
 article a {
