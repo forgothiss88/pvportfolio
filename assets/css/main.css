@@ -133,7 +133,7 @@ section {
   margin-bottom: 8px;
   margin-left: 24px;
   margin-right: 24px;
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 title.sub {
@@ -239,6 +239,10 @@ article p {
 
 a {
   text-decoration: none;
+}
+
+article a {
+  font-style: italic;
 }
 
 a:hover,
@@ -480,8 +484,13 @@ img.work {
   -ms-grid-column-align: end;
   place-self: center end;
 }
-
+.small-screen-only {
+  visibility: hidden;
+}
 @media screen and (max-width: 600px) {
+  .small-screen-only {
+    visibility: visible;
+  }
   .topbar {
     -ms-grid-columns: auto 1fr auto;
     grid-template-columns: auto 1fr auto;
