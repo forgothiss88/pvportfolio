@@ -6,7 +6,7 @@ meta_description: "A collection of my latest academic and professinal projects"
 <section class="w3-threequarter w3-row">
     <article style="margin-top: 0">
         <h1 style="display: inline;">WORKS </h1>
-        <h4 style="display: inline;">2017-2022</h4>
+        <h4 style="display: inline;">2019-2022</h4>
     </article>
     {% for work in site.works %}
     {% cycle "open": "<div class='w3-third'>", "", "", "" %}
@@ -18,7 +18,7 @@ meta_description: "A collection of my latest academic and professinal projects"
                 </a>
                 <i style="margin-left: auto;margin-right: 0; align-self: end; line-height: initial;"
                     onclick="toggleImg(this)" class="material-icons showimg hoverable"
-                    aria-label="show preview of {{ work.title }}">add</i>
+                    aria-label="show preview of {{ work.title_short }}">add</i>
             </span>
             <img class="work w3-hide" src="{{work.img_thumbnail}}" alt="Flowers in Chania">
             <p>

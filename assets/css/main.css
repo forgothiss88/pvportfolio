@@ -247,10 +247,6 @@ a {
   text-decoration: unset;
 }
 
-article a {
-  font-style: italic;
-}
-
 a:hover,
 i.material-icons.hoverable:hover {
   color: #cbcbcc;
