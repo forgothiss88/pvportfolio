@@ -3,14 +3,15 @@ permalink: /
 meta_title: "Works - Pietro Vitali"
 meta_description: "A collection of my latest academic and professinal projects"
 ---
-<section class="w3-threequarter w3-row">
+<section class="w3-row">
     <article style="margin-top: 0">
         <h1 style="display: inline;">WORKS </h1>
         <h4 style="display: inline;">2019-2022</h4>
     </article>
     {% for work in site.works %}
-    {% cycle "open": "<div class='w3-third'>", "", "", "" %}
-        <article>
+    {% cycle "open": "<div class='w3-col w3-container m6 l3'>", "",
+        ""%}
+        <article style="margin-left: unset; margin-right: unset;">
             <span class="lilborder" style="display: flex">
                 <a aria-label="open full {{ work.title }}" href="{{site.baseurl}}{{ work.url }}">
                     <h4>{{ work.title |
@@ -30,7 +31,7 @@ meta_description: "A collection of my latest academic and professinal projects"
         {% if forloop.last == true %}
     </div>
     {% else %}
-    {% cycle "close": "", "", "", "</div>" %}
+    {% cycle "close": "", "", "</div>" %}
     {% endif %}
     {% endfor %}
 </section>
