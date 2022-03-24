@@ -11,11 +11,17 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+
 html {
   color: black;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
+}
+
+button,
+a {
+  touch-action: manipulation;
 }
 
 a,
