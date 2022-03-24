@@ -59,6 +59,7 @@ defaults:
 # their entries' file path in the `include:` list.
 #
 exclude:
+  - webpack/
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
