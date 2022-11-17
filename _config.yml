@@ -32,7 +32,7 @@ collections:
   works:
     output: true
     label: works
-    permalink: /works/:title
+    permalink: /projects/:title
 
 # Build settings
 theme: minima
