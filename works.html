@@ -10,7 +10,7 @@ meta_description: "A collection of my latest academic and professinal projects"
     </article>
     {% for work in site.works %}
     {% cycle "open": "<div class='w3-col w3-container m6 l3'>", "",
-        ""%}
+        "", ""%}
         <article style="margin-left: unset; margin-right: unset;">
             <span class="lilborder" style="display: flex">
                 <a aria-label="open full {{ work.title }}" href="{{site.baseurl}}{{ work.url }}">
@@ -31,7 +31,7 @@ meta_description: "A collection of my latest academic and professinal projects"
         {% if forloop.last == true %}
     </div>
     {% else %}
-    {% cycle "close": "", "", "</div>" %}
+    {% cycle "close": "", "", "", "</div>" %}
     {% endif %}
     {% endfor %}
 </section>
