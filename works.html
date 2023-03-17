@@ -23,6 +23,11 @@ meta_description: "A collection of my latest academic and professinal projects"
             </span>
             <img class="work w3-hide" src="{{work.img_thumbnail}}" alt="Flowers in Chania">
             <p>
+                {{ work.tagline }} <a class="small-screen-only"
+                    style="font-style: italic; text-decoration: underline; opacity: 0.6;"
+                    href="{{ work.url }}">details</a>
+            </p>
+            <p>
                 {{ work.short_desc }} <a class="small-screen-only"
                     style="font-style: italic; text-decoration: underline; opacity: 0.6;"
                     href="{{ work.url }}">details</a>
