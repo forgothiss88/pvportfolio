@@ -17,13 +17,37 @@ layout: default
       </article>
     </div>
     <div class="img top right bg" style="background-image: url('{{page.img_top_right}}')">
+      {% assign ext = page.img_top_right | split: "." | last %}
+      {% if ext == "mp4" or ext == "webm" %}
+      <video autoplay loop muted>
+        <source id="{{page.img_top_right}}" src="{{page.img_top_right}}" type="video/{{ext}}">
+        Your Browser does not support videos.
+      </video>
+      {% else %}
       <img class="" src="{{page.img_top_right}}" alt="Flowers in Chania">
+      {% endif %}
     </div>
     <div class="img bot left i1">
+      {% assign ext = page.img_bot_left_1 | split: "." | last %}
+      {% if ext == "mp4" or ext == "webm" %}
+      <video autoplay loop muted>
+        <source id="{{page.img_bot_left_1}}" src="{{page.img_bot_left_1}}" type="video/{{ext}}">
+        Your Browser does not support videos.
+      </video>
+      {% else %}
       <img class="" src="{{page.img_bot_left_1}}" alt="Flowers in Chania">
+      {% endif %}
     </div>
     <div class="img bot left i2">
+      {% assign ext = page.img_bot_left_2 | split: "." | last %}
+      {% if ext == "mp4" or ext == "webm" %}
+      <video autoplay loop muted>
+        <source id="{{page.img_bot_left_2}}" src="{{page.img_bot_left_2}}" type="video/{{ext}}">
+        Your Browser does not support videos.
+      </video>
+      {% else %}
       <img class="" src="{{page.img_bot_left_2}}" alt="Flowers in Chania">
+      {% endif %}
     </div>
     <div class="img bot right" style="position: relative">
       {% for el in page.img_bot_right %}
